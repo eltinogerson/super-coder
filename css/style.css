@@ -1,0 +1,242 @@
+:root {
+  --dark-color: #010101ff;
+  --couleur-orange-mg: #ff6601ff;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+.animated {
+  animation: loader-end-animation 1s forwards;
+}
+
+.disable-scroll {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
+.app-loader {
+  width: 100%;
+  height: 100vh;
+  background: var(--dark-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.5s ease;
+}
+.app-loader .spinner-border {
+  color: var(--couleur-orange-mg);
+  margin-top: 20px;
+}
+
+@keyframes loader-end-animation {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: -100vh;
+  }
+}
+.app-head {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 2s ease;
+}
+.app-head .logo-bars {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.app-head .logo-bars .logo-icon {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.app-head .logo-bars .logo-icon img {
+  margin-top: -20px;
+  width: 100px;
+  height: auto;
+}
+.app-head .logo-bars .logo-icon img:nth-child(1) {
+  width: 150px;
+}
+.app-head .logo-bars .logo-icon img:nth-child(3) {
+  width: 100px;
+}
+.app-head .heading-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 0px;
+  height: 60vh;
+  align-items: center;
+}
+.app-head .heading-text p {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: var(--dark-color);
+}
+.app-head .heading-text p span {
+  color: var(--couleur-orange-mg);
+}
+.app-head .heading-text p:nth-child(1) {
+  font-size: 20px;
+}
+.app-head .heading-text p:nth-child(2) {
+  margin-top: -10px;
+  letter-spacing: 2px;
+  position: relative;
+}
+.app-head .heading-text p:nth-child(2) img {
+  position: absolute;
+  width: 30px;
+  height: auto;
+}
+.app-head .heading-text .btn {
+  background: var(--couleur-orange-mg);
+  color: #fff;
+  font-size: 16px;
+}
+.app-head .heading-text .btn:hover {
+  background: var(--dark-color);
+}
+.app-head .heading-text .btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.question {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.question p {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--dark-color);
+}
+.question p span {
+  color: var(--couleur-orange-mg);
+  text-align: center;
+}
+.question .response .btn {
+  color: #FFF;
+  letter-spacing: 1px;
+  width: 200px;
+  margin-left: 20px;
+  background: var(--couleur-orange-mg);
+}
+.question .response .btn:hover {
+  background: var(--dark-color);
+}
+.question .control {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+}
+.question .control .btn {
+  color: #FFF;
+  letter-spacing: 1px;
+  width: 200px;
+  margin-left: 20px;
+  background: var(--couleur-orange-mg);
+}
+.question .control .btn a {
+  text-decoration: none;
+  color: #FFF;
+}
+.question .control .btn:hover {
+  background: var(--dark-color);
+}
+
+@media screen and (max-width: 768px) {
+  #root {
+    display: none;
+  }
+
+  #question-8 .response .btn {
+    width: auto;
+    height: 50px;
+  }
+  #question-8 .response .btn img {
+    width: 100px;
+    height: auto;
+  }
+
+  .app-head .heading-text p {
+    font-size: 30px;
+  }
+
+  .question {
+    min-height: 100vh;
+  }
+  .question p {
+    font-size: 20px;
+    text-align: center;
+  }
+  .question .response {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .question .response .btn {
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+  .question .control {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .question .control .btn {
+    width: 150px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

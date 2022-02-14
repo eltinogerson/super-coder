@@ -1,0 +1,198 @@
+:root {
+    --dark-color: #010101ff;
+    --couleur-orange-mg: #ff6601ff;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+.animated {
+    animation: loader-end-animation 1s forwards;
+}
+
+.disable-scroll {
+    overflow: hidden
+}
+
+@import 'scroll_bars.scss';
+@import 'loader.scss';
+.app-head {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 2s ease;
+    .logo-bars {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .logo-icon {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            img {
+                margin-top: -20px;
+                width: 100px;
+                height: auto;
+                &:nth-child(1) {
+                    width: 150px;
+                }
+                &:nth-child(3) {
+                    width: 100px;
+                }
+            }
+        }
+    }
+    .heading-text {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0px;
+        height: 60vh;
+        align-items: center;
+        p {
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            color: var(--dark-color);
+            span {
+                color: var(--couleur-orange-mg);
+            }
+            &:nth-child(1) {
+                font-size: 20px;
+            }
+            &:nth-child(2) {
+                margin-top: -10px;
+                letter-spacing: 2px;
+                position: relative;
+                img {
+                    position: absolute;
+                    width: 30px;
+                    height: auto;
+                }
+            }
+        }
+        .btn {
+            background: var(--couleur-orange-mg);
+            color: #fff;
+            font-size: 16px;
+            &:hover {
+                background: var(--dark-color);
+            }
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.question {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    p {
+        font-size: 30px;
+        font-weight: bold;
+        color: var(--dark-color);
+        span {
+            color: var(--couleur-orange-mg);
+            text-align: center;
+        }
+    }
+    .response {
+        .btn {
+            color: #FFF;
+            letter-spacing: 1px;
+            width: 200px;
+            margin-left: 20px;
+            background: var(--couleur-orange-mg);
+            &:hover {
+                background: var(--dark-color);
+            }
+        }
+    }
+    .control {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        .btn {
+            color: #FFF;
+            letter-spacing: 1px;
+            width: 200px;
+            margin-left: 20px;
+            background: var(--couleur-orange-mg);
+            a {
+                text-decoration: none;
+                color: #FFF;
+            }
+            &:hover {
+                background: var(--dark-color);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    #root {
+        display: none;
+    }
+    #question-8 {
+        .response {
+            .btn {
+                width: auto;
+                height: 50px;
+                img {
+                    width: 100px;
+                    height: auto;
+                }
+            }
+        }
+    }
+    .app-head {
+        .heading-text {
+            p {
+                font-size: 30px;
+            }
+        }
+    }
+    .question {
+        min-height: 100vh;
+        p {
+            font-size: 20px;
+            text-align: center;
+        }
+        .response {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .btn {
+                margin-top: 10px;
+                margin-left: 0px;
+            }
+        }
+        .control {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .btn {
+                width: 150px;
+            }
+        }
+    }
+}
